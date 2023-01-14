@@ -32,7 +32,7 @@ header{
 .navbar{
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 .brand{
     display: flex;
@@ -129,9 +129,7 @@ hr{
     border-radius: 16px;
     padding: 12px;
 }
-.course-banner{
-    
-}
+.course-banner{}
 .course-banner img{
     width: 224px;
     height: 104px;
@@ -172,3 +170,64 @@ hr{
     font-size: 20px;
     margin-right: 5px;
 }
+
+/* ----------------- 
+    Media Queries
+--------------------*/
+
+/* Mobile Devices */
+@media only screen and (max-width:668px) {
+    header{
+        padding: 0 16px;
+        width: 100%;
+    }
+    .navbar{
+        justify-content: center;
+    }
+    .brand{
+        display: none;
+    }
+    .menu-items {
+        gap: 20px;
+    }
+    .container{
+        width: 100%;
+    }
+    .top-players, .top-blogs, .courses{
+        text-align: center;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .section-title{
+        text-align: center;
+    }
+    .player, .blog{
+        flex-direction: column; 
+    }
+   
+}
+/* Tablet Devices */
+@media only screen and (min-width:668px) and (max-width:992px){
+    .navbar{
+        justify-content: center;
+        gap: 100px;
+    }
+    .container{
+        width: 100%;
+    }
+    .top-players, .top-blogs, .courses{
+        margin: 0 40px;
+    }
+    .section-title{
+        text-align: center;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    hr{
+        margin-top: 25px;
+    }
+}
+    
+
